@@ -10,6 +10,12 @@ public abstract class AbstractItem implements Item {
     // 表示物品的品质
     public int quality;
 
+    public AbstractItem(com.gildedrose.Item item) {
+        this.name = item.name;
+        this.sellIn = item.sellIn;
+        this.quality = item.quality;
+    }
+
     @Override
     public void updateQuality() {
         sellIn--;
