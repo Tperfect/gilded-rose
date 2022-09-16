@@ -37,4 +37,9 @@ public abstract class AbstractItem implements Item {
         updateSellIn();
         updateQuality();
     }
+
+    @Override
+    public String toString() {
+        return this.name + ", " + this.sellIn + ", " + this.quality;
+    }
 }
