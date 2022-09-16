@@ -18,7 +18,6 @@ public abstract class AbstractItem implements Item {
 
     @Override
     public void updateQuality() {
-        sellIn--;
         if (quality > 0) {
             quality--;
         }
@@ -26,5 +25,16 @@ public abstract class AbstractItem implements Item {
         if (quality > 0 && sellIn < 0) {
             quality--;
         }
+    }
+
+    @Override
+    public void updateSellIn() {
+        sellIn--;
+    }
+
+    @Override
+    public void update() {
+        updateSellIn();
+        updateQuality();
     }
 }

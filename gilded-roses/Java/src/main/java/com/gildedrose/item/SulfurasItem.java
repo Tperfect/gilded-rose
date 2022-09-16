@@ -13,7 +13,7 @@ public class SulfurasItem extends AbstractItem{
     }
 
     @Override
-    public void updateQuality() {
+    public void update() {
 
     }
 }

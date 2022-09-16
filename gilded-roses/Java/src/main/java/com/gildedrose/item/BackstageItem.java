@@ -13,7 +13,6 @@ public class BackstageItem extends AbstractItem {
 
     @Override
     public void updateQuality() {
-        sellIn--;
         if (sellIn < 0) {
             quality = 0;
             return;
@@ -21,16 +20,12 @@ public class BackstageItem extends AbstractItem {
         if (quality < 50) {
             quality++;
         }
-        if (sellIn < 11) {
-            if (quality < 50) {
-                quality++;
-            }
+        if (sellIn < 11 && quality < 50) {
+            quality++;
         }
         // 当还剩5天或更少的时候，品质`Quality`每天提高3；
-        if (sellIn < 6) {
-            if (quality < 50) {
-                quality++;
-            }
+        if (sellIn < 6 && quality < 50) {
+            quality++;
         }
     }
 }
