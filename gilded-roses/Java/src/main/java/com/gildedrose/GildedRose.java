@@ -22,7 +22,7 @@ class GildedRose {
                     items[i].quality = items[i].quality + 1;
 
                     if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                        //当还剩10天或更少的时候，品质`Quality`每天提高2； todo 但一旦过期，品质就会降为0
+                        //当还剩10天或更少的时候，品质`Quality`每天提高2；
                         if (items[i].sellIn < 11) {
                             if (items[i].quality < 50) {
                                 items[i].quality = items[i].quality + 1;
