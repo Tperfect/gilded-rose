@@ -13,7 +13,7 @@ public class BackstageItem extends AbstractItem {
 
     @Override
     public void updateQuality() {
-        if (sellIn < 0) {
+        if (sellIn < 1) {
             quality = 0;
             return;
         }

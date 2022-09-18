@@ -22,7 +22,7 @@ public abstract class AbstractItem implements Item {
             quality--;
         }
         // 判断是否过期,过期会加速降低品质
-        if (quality > 0 && sellIn < 0) {
+        if (quality > 0 && sellIn < 1) {
             quality--;
         }
     }
@@ -34,8 +34,8 @@ public abstract class AbstractItem implements Item {
 
     @Override
     public void update() {
-        updateSellIn();
         updateQuality();
+        updateSellIn();
     }
 
     @Override
